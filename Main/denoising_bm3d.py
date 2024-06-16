@@ -13,25 +13,25 @@ def denoising_bm3d(
         cor_ill_map: np.ndarray,
         std_dev: Union[int, float]=0.02
         ) -> np.ndarray:
-    """Performes denoising of an image Y color channel with B3MD algorithm and 
-    corrects its brigghtness with an updated illumination map.
+    # """Performes denoising of an image Y color channel with B3MD algorithm and 
+    # corrects its brigghtness with an updated illumination map.
 
-    Returns a shape-(M, N) denoised image with corrected brightness in which
-    pixel intensities exceeding 1 are clipped.
+    # Returns a shape-(M, N) denoised image with corrected brightness in which
+    # pixel intensities exceeding 1 are clipped.
 
-    ## Args:
-        image (numpy.ndarray) : A shape-(3, M, N) initial image.
+    # ## Args:
+    #     image (numpy.ndarray) : A shape-(3, M, N) initial image.
 
-        cor_ill_map (numpy.ndarray) : A shape-(M, N) array of 
-        corrected intensity values.
+    #     cor_ill_map (numpy.ndarray) : A shape-(M, N) array of 
+    #     corrected intensity values.
 
-        std_dev (int or float) : A value of standard deviation parameter for 
-        the BM3D algorithm.
+    #     std_dev (int or float) : A value of standard deviation parameter for 
+    #     the BM3D algorithm.
 
-    ## Returns:
-        (numpy.ndarray) : A shape-(M, N) denoised image with a corrected 
-        illumination map.
-    """
+    # ## Returns:
+    #     (numpy.ndarray) : A shape-(M, N) denoised image with a corrected 
+    #     illumination map.
+    # """
 
     image_yuv = cv2.cvtColor(image, cv2.COLOR_RGB2YUV)
     y_channel = image_yuv[:, :, 0]
