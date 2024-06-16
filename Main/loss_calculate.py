@@ -3,20 +3,20 @@ def loss_calculate(
         reference_image: np.ndarray,
         refined_image: np.ndarray
         ) -> float:
-    """Calculates the lightness order error (LOE) metric comparing pixel 
-    intensities of a refined image with their reference counterparts.
+    # """Calculates the lightness order error (LOE) metric comparing pixel 
+    # intensities of a refined image with their reference counterparts.
 
-    Returns a calculated value of the LOE metric.
+    # Returns a calculated value of the LOE metric.
 
-    ## Args:
-        reference_image (numpy.ndarray) : A shape-(3, M, N) reference image 
-        which is considered as ground truth.
+    # ## Args:
+    #     reference_image (numpy.ndarray) : A shape-(3, M, N) reference image 
+    #     which is considered as ground truth.
 
-        refined_image (numpy.ndarray) : A shape-(3, M, N) refined image.
+    #     refined_image (numpy.ndarray) : A shape-(3, M, N) refined image.
 
-    ## Returns:
-        (float) : A calculated value of the LOE metric.
-    """
+    # ## Returns:
+    #     (float) : A calculated value of the LOE metric.
+    # """
 
     v_shape, h_shape = reference_image.shape
     n_pixels = reference_image.size
